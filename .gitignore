@@ -24,3 +24,6 @@ htmlcov/
 
 # Operating system
 .DS_Store
+
+
+llm_inference_gateway.egg-info
