@@ -12,6 +12,16 @@ This specification defines the first runnable version of the LLM inference gatew
 
 The implementation must remain limited to the scope of this document.
 
+Approved Design Decisions
+
+- Dependency management uses `pyproject.toml`.
+- Validation errors use the unified gateway error structure.
+- The OpenAI Python SDK compatibility check is automated.
+- The Mock Provider uses the latest user message when available.
+- If no user message exists, the Mock Provider uses the final message.
+- Internal model registrations use immutable dataclasses.
+- Providers are injected into the application service through a provider mapping.
+
 ## 2. Goal
 
 Implement the first complete request path:

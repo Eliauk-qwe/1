@@ -1,0 +1,20 @@
+[project]
+name = "llm-inference-gateway"
+version = "0.1.0"
+description = "OpenAI-compatible LLM inference gateway and benchmarking platform"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "pydantic",
+]
+
+[project.optional-dependencies]
+  dev = [
+      "pytest",
+      "httpx",
+      "openai",
+  ]
+
+[tool.setuptools.packages.find]
+include = ["app"]
